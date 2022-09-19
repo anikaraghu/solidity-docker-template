@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  main:
+    image: node:16.3.0-alpine
+    volumes:
+      - $PWD/..:$PWD/..
+    working_dir: $PWD
+    env_file:
+      - .env
+    command: echo
