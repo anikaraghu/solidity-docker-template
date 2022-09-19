@@ -7,31 +7,24 @@ up:
 down:
 	docker-compose down -t 0
 
+node:
+	$(call run_compose, npx hardhat node)
+
 install:
-	docker-compose run main yarn install
 	$(call run_yarn_command, install)
-
-.PHONY: test
-test:
-	$(call run_yarn_command, test)
-
-test-report-gas:
-	$(call run_yarn_command, test, -e REPORT_GAS=true)
-
-compile:
-	$(call run_yarn_command, compile)
-
-typechain:
-	$(call run_yarn_command, typechain)
-
-deploy:
-	$(call run_yarn_command, deploy)
 
 clean:
 	$(call run_yarn_command, clean)
 
-coverage:
-	$(call run_yarn_command, coverage)
+typechain:
+	$(call run_yarn_command, typechain)
 
-prettier:
-	$(call run_yarn_command, prettier)
+compile:
+	$(call run_yarn_command, compile)
+
+deploy:
+	$(call run_yarn_command, deploy)
+
+.PHONY: test
+test:
+	$(call run_yarn_command, test)

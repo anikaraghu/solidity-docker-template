@@ -6,6 +6,7 @@ import { HardhatUserConfig } from "hardhat/config";
 import "solidity-coverage";
 
 import * as dotenv from "dotenv";
+import "./scripts/deploy";
 dotenv.config();
 
 const config: HardhatUserConfig = {
