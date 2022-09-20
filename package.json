@@ -5,6 +5,7 @@
     "@ethersproject/abi": "^5.6.0",
     "@ethersproject/bytes": "^5.6.1",
     "@ethersproject/providers": "^5.6.2",
+    "@nomicfoundation/solidity-analyzer": "^0.1.0",
     "@nomiclabs/hardhat-ethers": "^2.0.5",
     "@nomiclabs/hardhat-etherscan": "^3.1.0",
     "@openzeppelin/contracts": "^4.7.1",
@@ -36,5 +37,6 @@
     "typechain": "cross-env TS_NODE_TRANSPILE_ONLY=true hardhat typechain",
     "test": "hardhat test",
     "clean": "hardhat clean"
-  }
+  },
+  "repository": "git@github.com:anikaraghu/solidity-docker-template.git"
 }
